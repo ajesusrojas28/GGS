@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GGS - Ejercicio 2</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header class="encabezado">
+        <h1>Mi sitio GGS</h1>
+        <p>Aprendiendo diseño web responsive</p>
+    </header>
+
+    <nav class="menu" aria-label="Principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#articulos">Artículos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="pagina">
+        <main class="principal">
+            <section id="inicio">
+                <h2>Bienvenido</h2>
+                <p>Esta página está dividida en secciones semánticas: encabezado, menú de navegación, contenido principal, barra lateral y pie de página. Cambia el tamaño de la ventana para ver cómo se reacomoda.</p>
+            </section>
+
+            <section id="articulos">
+                <h2>Artículos</h2>
+                <article>
+                    <h3>¿Qué es el diseño responsive?</h3>
+                    <p>Es una forma de maquetar para que el sitio se vea bien en celular, tablet y computadora usando medidas flexibles y media queries.</p>
+                </article>
+                <article>
+                    <h3>Por qué usar etiquetas semánticas</h3>
+                    <p>Etiquetas como header, nav, main, aside y footer le dan significado al contenido y ayudan a la accesibilidad y al posicionamiento.</p>
+                </article>
+            </section>
+        </main>
+
+        <aside class="lateral">
+            <h2>Enlaces útiles</h2>
+            <ul>
+                <li>Guía de HTML</li>
+                <li>Guía de CSS Grid</li>
+                <li>Flexbox en 5 minutos</li>
+            </ul>
+            <h2>Aviso</h2>
+            <p>Esta barra pasa debajo del contenido en pantallas pequeñas.</p>
+        </aside>
+    </div>
+
+    <footer class="pie">
+        <p>&copy; 2026 GGS. Todos los derechos reservados.</p>
+        <p id="contacto">correo@ejemplo.com</p>
+    </footer>
+</body>
+</html>
