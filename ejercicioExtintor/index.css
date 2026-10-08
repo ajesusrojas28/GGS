@@ -1,0 +1,140 @@
+:root {
+    --rojo: #c40000;
+    --azul: #12338f;
+    --verde: #1b7a3a;
+    --texto: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e9e9e9;
+    color: var(--texto);
+}
+
+
+.cartel {
+    width: min(100%, 560px);
+    padding: clamp(12px, 4vw, 28px);
+    padding-bottom: 0;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.cartel__titulo {
+    padding: 0.1em 0.2em;
+    font-family: Impact, "Arial Black", sans-serif;
+    font-size: clamp(2.6rem, 14vw, 5rem);
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    color: #fff;
+    background: var(--rojo);
+}
+
+.cartel__subtitulo {
+    margin-top: 10px;
+    font-size: clamp(0.85rem, 3.6vw, 1.25rem);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.clase {
+    width: clamp(70px, 20vw, 105px);
+    margin: 16px auto 10px;
+}
+
+.icono {
+    width: clamp(110px, 32vw, 150px);
+    margin: 0 auto 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 7px;
+}
+
+.icono:hover,
+.icono:focus-visible {
+    transform: scale(1.12);
+    outline: 3px solid var(--rojo);
+    outline-offset: 3px;
+}
+
+.icono svg,
+.clase svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.icono:hover .llama,
+.icono:focus-visible .llama {
+    animation: parpadeo 0.35s infinite alternate ease-in-out;
+    transform-box: fill-box;
+    transform-origin: bottom center;
+}
+
+@keyframes parpadeo {
+    from { transform: scale(1, 1) rotate(-4deg); }
+    to   { transform: scale(1.1, 1.25) rotate(4deg); }
+}
+
+.cartel__tipos {
+    font-size: clamp(0.9rem, 3.6vw, 1.1rem);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.cartel__tipos span {
+    display: block;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.cartel__metodo {
+    margin-top: 18px;
+    font-family: Impact, "Arial Black", sans-serif;
+    font-size: clamp(1.2rem, 5.6vw, 2rem);
+    letter-spacing: 0.04em;
+    color: var(--azul);
+}
+
+.cartel__pasos {
+    width: fit-content;
+    max-width: 100%;
+    margin: 8px auto 0;
+    padding-left: 1.4em;
+    text-align: left;
+    font-size: clamp(0.9rem, 3.6vw, 1.15rem);
+    line-height: 1.5;
+}
+
+
+.cartel__franja {
+    height: clamp(70px, 20vw, 130px);
+    margin: 20px calc(-1 * clamp(12px, 4vw, 28px)) 0;
+    background: repeating-linear-gradient(
+        115deg,
+        var(--rojo) 0 14%,
+        #fff 14% 28%
+    );
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .icono,
+    .icono .llama {
+        animation: none !important;
+        transition: none;
+    }
+}
